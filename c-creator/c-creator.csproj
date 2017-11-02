@@ -54,6 +54,8 @@
     </Compile>
     <Compile Include="Infrastructure\ExcelReader.cs" />
     <Compile Include="Infrastructure\Mediator.cs" />
+    <Compile Include="Infrastructure\Settings.cs" />
+    <Compile Include="Infrastructure\TextFileReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -27,19 +27,19 @@ namespace c_creator.Infrastructure
 
         public void Read()
         {
-            // просмотрим с 1-ой по 5-ую строки
-            int lastColumnIndex = 5;
-            
-            for (int i = 1; i <= lastColumnIndex; i++)
+            // просмотрим с 1-ой по N-ую строки
+            int lastColumnIndex = Settings.RowCount;
+
+            for (int i = 1; i <= _xlRange.Columns.Count; i++)
             {
                 List<string> tmpList = new List<string>();
-                tmpList.Clear();
-                for (int j = 1; j <= _xlRange.Columns.Count; j++)
+                for (int j = 1; j <= lastColumnIndex; j++)
                 {
-                    tmpList.Add(Convert.ToString(((Range)_xlWorkSheet.Cells[i, j]).Value));
+                    tmpList.Add(Convert.ToString(((Range)_xlWorkSheet.Cells[j, i]).Value));
                 }
                 Mediator.DataList.Add(tmpList);
             }
+            Mediator.IsReady = true;
         }
     }
 }
