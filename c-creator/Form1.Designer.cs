@@ -46,7 +46,7 @@
             this.listBox_xls_start.HorizontalScrollbar = true;
             this.listBox_xls_start.Location = new System.Drawing.Point(12, 42);
             this.listBox_xls_start.Name = "listBox_xls_start";
-            this.listBox_xls_start.Size = new System.Drawing.Size(418, 459);
+            this.listBox_xls_start.Size = new System.Drawing.Size(426, 563);
             this.listBox_xls_start.TabIndex = 0;
             this.listBox_xls_start.SelectedIndexChanged += new System.EventHandler(this.listBox_xls_start_SelectedIndexChanged);
             // 
@@ -54,7 +54,7 @@
             // 
             this.button_open_file.Location = new System.Drawing.Point(12, 12);
             this.button_open_file.Name = "button_open_file";
-            this.button_open_file.Size = new System.Drawing.Size(418, 23);
+            this.button_open_file.Size = new System.Drawing.Size(426, 23);
             this.button_open_file.TabIndex = 1;
             this.button_open_file.Text = "Open file";
             this.button_open_file.UseVisualStyleBackColor = true;
@@ -65,36 +65,39 @@
             this.listBox_db_start.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_db_start.FormattingEnabled = true;
-            this.listBox_db_start.Location = new System.Drawing.Point(776, 42);
+            this.listBox_db_start.Location = new System.Drawing.Point(908, 42);
             this.listBox_db_start.Name = "listBox_db_start";
-            this.listBox_db_start.Size = new System.Drawing.Size(201, 459);
+            this.listBox_db_start.Size = new System.Drawing.Size(201, 563);
             this.listBox_db_start.TabIndex = 2;
+            this.listBox_db_start.SelectedIndexChanged += new System.EventHandler(this.listBox_db_start_SelectedIndexChanged);
             // 
             // listBox_xls_finish
             // 
             this.listBox_xls_finish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listBox_xls_finish.FormattingEnabled = true;
+            this.listBox_xls_finish.HorizontalScrollbar = true;
             this.listBox_xls_finish.Location = new System.Drawing.Point(462, 42);
             this.listBox_xls_finish.Name = "listBox_xls_finish";
-            this.listBox_xls_finish.Size = new System.Drawing.Size(136, 459);
+            this.listBox_xls_finish.Size = new System.Drawing.Size(263, 563);
             this.listBox_xls_finish.TabIndex = 3;
+            this.listBox_xls_finish.SelectedIndexChanged += new System.EventHandler(this.listBox_xls_finish_SelectedIndexChanged);
             // 
             // listBox_db_finish
             // 
             this.listBox_db_finish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_db_finish.FormattingEnabled = true;
-            this.listBox_db_finish.Location = new System.Drawing.Point(617, 42);
+            this.listBox_db_finish.Location = new System.Drawing.Point(749, 42);
             this.listBox_db_finish.Name = "listBox_db_finish";
-            this.listBox_db_finish.Size = new System.Drawing.Size(134, 459);
+            this.listBox_db_finish.Size = new System.Drawing.Size(134, 563);
             this.listBox_db_finish.TabIndex = 4;
             // 
             // comboBox_table
             // 
             this.comboBox_table.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox_table.FormattingEnabled = true;
-            this.comboBox_table.Location = new System.Drawing.Point(776, 15);
+            this.comboBox_table.Location = new System.Drawing.Point(908, 15);
             this.comboBox_table.Name = "comboBox_table";
             this.comboBox_table.Size = new System.Drawing.Size(201, 21);
             this.comboBox_table.TabIndex = 5;
@@ -107,7 +110,7 @@
             this.button_create_ctrl.Enabled = false;
             this.button_create_ctrl.Location = new System.Drawing.Point(462, 13);
             this.button_create_ctrl.Name = "button_create_ctrl";
-            this.button_create_ctrl.Size = new System.Drawing.Size(289, 23);
+            this.button_create_ctrl.Size = new System.Drawing.Size(421, 23);
             this.button_create_ctrl.TabIndex = 6;
             this.button_create_ctrl.Text = "Create control";
             this.button_create_ctrl.UseVisualStyleBackColor = true;
@@ -116,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 522);
+            this.ClientSize = new System.Drawing.Size(1124, 637);
             this.Controls.Add(this.button_create_ctrl);
             this.Controls.Add(this.comboBox_table);
             this.Controls.Add(this.listBox_db_finish);

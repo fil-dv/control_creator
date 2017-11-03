@@ -53,6 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ExcelReader.cs" />
+    <Compile Include="Infrastructure\MyListViewItem.cs" />
     <Compile Include="Infrastructure\Mediator.cs" />
     <Compile Include="Infrastructure\Settings.cs" />
     <Compile Include="Infrastructure\TextFileReader.cs" />
