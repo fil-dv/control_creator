@@ -1,19 +1,15 @@
 ﻿using c_creator.Infrastructure;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace c_creator
 {
     public partial class Ctrl_creator : Form
     {
+        string _xlsFilePath;
         List<MyListViewItem> _xlsItemList_1 = new List<MyListViewItem>();
         List<MyListViewItem> _xlsItemList_2 = new List<MyListViewItem>();
         List<MyListViewItem> _dbItemList_1 = new List<MyListViewItem>();
@@ -31,7 +27,10 @@ namespace c_creator
             {
                 selectFileDialog.Filter = "Excel Files|*.xls;*.xlsx;";
                 if (selectFileDialog.ShowDialog() == DialogResult.OK)
-                {                    
+                {
+                    _xlsFilePath = selectFileDialog.FileName;
+                    int index = _xlsFilePath.LastIndexOf('\\');
+                    _xlsFilePath = _xlsFilePath.Substring(0, index + 1);
                     ExcelReader reader = new ExcelReader(this, selectFileDialog.FileName);
                     reader.Read();
                     InsertXlsToListBox();                    
@@ -48,11 +47,12 @@ namespace c_creator
 
         void InsertDbTableCulumns(string fileName)
         {
-            List<string> columnList = TextFileReader.ReadTextFile(@"..\..\text\" + fileName);
-            
-            foreach (var item in columnList)
+            List<string> columnList = TextFileHandler.ReadTextFile(@"..\..\text\" + fileName);
+            List<MyListViewItem> myItemList = CreateListViewItems(columnList);
+            foreach (var item in myItemList)
             {
-                listBox_db_start.Items.Add(item);
+                _dbItemList_1.Add(item);
+                listBox_db_start.Items.Add(item.Text);
             }
         }
 
@@ -126,7 +126,7 @@ namespace c_creator
             }
         }
 
-        void SetCreateButtonStatus()////////////////////////////////
+        void SetCreateButtonStatus()
         {
             int xlsCount = listBox_xls_finish.Items.Count;
             int dbCount = listBox_db_finish.Items.Count;
@@ -189,6 +189,14 @@ namespace c_creator
                 {
                     return;
                 }
+                else
+                {
+                    string str = listBox_db_start.SelectedItem.ToString();
+                    if (str.Contains("--"))
+                    {
+                        return;
+                    }
+                }
                 MyListViewItem myItem = _dbItemList_1.Where(i => i.Text == listBox_db_start.SelectedItem.ToString()).First();
                 MoveItem(_dbItemList_1, _dbItemList_2, myItem);
                 ReDrow(listBox_db_start, _dbItemList_1);
@@ -198,6 +206,43 @@ namespace c_creator
             catch (Exception ex)
             {
                 MessageBox.Show("Exception from listBox_db_start_SelectedIndexChanged \n" + ex.Message);
+            }
+        }
+
+
+        private void listBox_db_finish_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listBox_db_finish.SelectedItem == null)
+                {
+                    return;
+                }
+                MyListViewItem myItem = _dbItemList_2.Where(i => i.Text == listBox_db_finish.SelectedItem.ToString()).First();
+                MoveItem(_dbItemList_2, _dbItemList_1, myItem);
+                _dbItemList_1.Sort((x, y) => x.Id.CompareTo(y.Id));
+                ReDrow(listBox_db_start, _dbItemList_1);
+                ReDrow(listBox_db_finish, _dbItemList_2);
+                SetCreateButtonStatus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception from listBox_xls_finish_SelectedIndexChanged \n" + ex.Message);
+            }
+        }
+
+        private void button_create_ctrl_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TextFileHandler.CreateTextFile(_xlsFilePath))
+                {
+                    MessageBox.Show(_xlsFilePath + Settings.CtrlFileName, "Файл успешно создан!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception from button_create_ctrl_Click. " + ex.Message);
             }
         }
     }

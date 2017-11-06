@@ -92,6 +92,7 @@
             this.listBox_db_finish.Name = "listBox_db_finish";
             this.listBox_db_finish.Size = new System.Drawing.Size(134, 563);
             this.listBox_db_finish.TabIndex = 4;
+            this.listBox_db_finish.SelectedIndexChanged += new System.EventHandler(this.listBox_db_finish_SelectedIndexChanged_1);
             // 
             // comboBox_table
             // 
@@ -114,6 +115,7 @@
             this.button_create_ctrl.TabIndex = 6;
             this.button_create_ctrl.Text = "Create control";
             this.button_create_ctrl.UseVisualStyleBackColor = true;
+            this.button_create_ctrl.Click += new System.EventHandler(this.button_create_ctrl_Click);
             // 
             // Ctrl_creator
             // 
