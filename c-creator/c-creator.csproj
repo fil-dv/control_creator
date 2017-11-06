@@ -58,6 +58,7 @@
     <Compile Include="Infrastructure\Mediator.cs" />
     <Compile Include="Infrastructure\Settings.cs" />
     <Compile Include="Infrastructure\TextFileHandler.cs" />
+    <Compile Include="Infrastructure\XlsDbPair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

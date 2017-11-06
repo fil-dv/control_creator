@@ -11,7 +11,10 @@ namespace c_creator.Infrastructure
         static int _rowCount = 5;
         public static int RowCount { get { return _rowCount; } set { _rowCount = value; } }
 
-        public static string _ctrlFileName = "1_import.CTL";
+        static string _ctrlFileName = "1_import.CTL";
         public static string CtrlFileName { get { return _ctrlFileName; } set { _ctrlFileName = value; } }
+
+        static int _сommentStart = 40;
+        public static int CommentStart { get { return _сommentStart; } set { _сommentStart = value; } }
     }
 }

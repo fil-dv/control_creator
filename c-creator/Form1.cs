@@ -87,6 +87,7 @@ namespace c_creator
                     strList.Add(str);
                 }
                 _xlsItemList_1 = CreateListViewItems(strList);
+                Mediator.StartList = _xlsItemList_1;
                 foreach (var item in _xlsItemList_1)
                 {
                     listBox_xls_start.Items.Add(item.Text);
@@ -235,6 +236,7 @@ namespace c_creator
         {
             try
             {
+                Mediator.PairList = CreatePairList();
                 if (TextFileHandler.CreateTextFile(_xlsFilePath))
                 {
                     MessageBox.Show(_xlsFilePath + Settings.CtrlFileName, "Файл успешно создан!");
@@ -244,6 +246,24 @@ namespace c_creator
             {
                 MessageBox.Show("Exception from button_create_ctrl_Click. " + ex.Message);
             }
+        }
+
+        List<XlsDbPair> CreatePairList()
+        {
+            List<XlsDbPair> resList = new List<XlsDbPair>();
+            int itemCount = listBox_xls_finish.Items.Count;
+            for (int i = 0; i < itemCount; i++)
+            {
+                XlsDbPair pair = new XlsDbPair
+                {
+                    XlsRowId = _xlsItemList_2[i].Id,
+                    //DbRowID = _dbItemList_2[i].Id,
+                    //XlsRowText = _xlsItemList_2[i].Text,
+                    DbRowText = _dbItemList_2[i].Text
+                };
+                resList.Add(pair);
+            }
+            return resList;
         }
     }
 }
