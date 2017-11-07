@@ -7,4 +7,5 @@ D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.csproj.Gen
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.exe
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.pdb
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.csproj.ResolveComReference.cache
+D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c_creator.SettingsForm.SettingsForm.resources
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.csprojResolveAssemblyReference.cache

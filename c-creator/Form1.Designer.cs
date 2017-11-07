@@ -43,6 +43,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.listBox_xls_start.HorizontalScrollbar = true;
             this.listBox_xls_start.Location = new System.Drawing.Point(12, 62);
             this.listBox_xls_start.Name = "listBox_xls_start";
-            this.listBox_xls_start.Size = new System.Drawing.Size(426, 602);
+            this.listBox_xls_start.Size = new System.Drawing.Size(426, 576);
             this.listBox_xls_start.TabIndex = 0;
             this.listBox_xls_start.SelectedIndexChanged += new System.EventHandler(this.listBox_xls_start_SelectedIndexChanged);
             // 
@@ -73,9 +75,9 @@
             this.listBox_db_start.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_db_start.FormattingEnabled = true;
-            this.listBox_db_start.Location = new System.Drawing.Point(908, 62);
+            this.listBox_db_start.Location = new System.Drawing.Point(1143, 62);
             this.listBox_db_start.Name = "listBox_db_start";
-            this.listBox_db_start.Size = new System.Drawing.Size(201, 602);
+            this.listBox_db_start.Size = new System.Drawing.Size(201, 576);
             this.listBox_db_start.TabIndex = 2;
             this.listBox_db_start.SelectedIndexChanged += new System.EventHandler(this.listBox_db_start_SelectedIndexChanged);
             // 
@@ -87,7 +89,7 @@
             this.listBox_xls_finish.HorizontalScrollbar = true;
             this.listBox_xls_finish.Location = new System.Drawing.Point(462, 62);
             this.listBox_xls_finish.Name = "listBox_xls_finish";
-            this.listBox_xls_finish.Size = new System.Drawing.Size(263, 602);
+            this.listBox_xls_finish.Size = new System.Drawing.Size(441, 576);
             this.listBox_xls_finish.TabIndex = 3;
             this.listBox_xls_finish.SelectedIndexChanged += new System.EventHandler(this.listBox_xls_finish_SelectedIndexChanged);
             // 
@@ -96,9 +98,9 @@
             this.listBox_db_finish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_db_finish.FormattingEnabled = true;
-            this.listBox_db_finish.Location = new System.Drawing.Point(749, 62);
+            this.listBox_db_finish.Location = new System.Drawing.Point(923, 62);
             this.listBox_db_finish.Name = "listBox_db_finish";
-            this.listBox_db_finish.Size = new System.Drawing.Size(134, 602);
+            this.listBox_db_finish.Size = new System.Drawing.Size(195, 576);
             this.listBox_db_finish.TabIndex = 4;
             this.listBox_db_finish.SelectedIndexChanged += new System.EventHandler(this.listBox_db_finish_SelectedIndexChanged_1);
             // 
@@ -106,7 +108,7 @@
             // 
             this.comboBox_table.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox_table.FormattingEnabled = true;
-            this.comboBox_table.Location = new System.Drawing.Point(908, 29);
+            this.comboBox_table.Location = new System.Drawing.Point(1143, 29);
             this.comboBox_table.Name = "comboBox_table";
             this.comboBox_table.Size = new System.Drawing.Size(201, 21);
             this.comboBox_table.TabIndex = 5;
@@ -119,7 +121,7 @@
             this.button_create_ctrl.Enabled = false;
             this.button_create_ctrl.Location = new System.Drawing.Point(462, 27);
             this.button_create_ctrl.Name = "button_create_ctrl";
-            this.button_create_ctrl.Size = new System.Drawing.Size(421, 23);
+            this.button_create_ctrl.Size = new System.Drawing.Size(656, 23);
             this.button_create_ctrl.TabIndex = 6;
             this.button_create_ctrl.Text = "Create control";
             this.button_create_ctrl.UseVisualStyleBackColor = true;
@@ -132,13 +134,15 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1124, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1359, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripSeparator2,
             this.settingsToolStripMenuItem,
             this.toolStripSeparator1,
             this.toolStripMenuItem2});
@@ -179,11 +183,23 @@
             this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.aboutProgrammToolStripMenuItem.Text = "About programm";
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem3.Text = "Clear All";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            // 
             // Ctrl_creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 676);
+            this.ClientSize = new System.Drawing.Size(1359, 673);
             this.Controls.Add(this.button_create_ctrl);
             this.Controls.Add(this.comboBox_table);
             this.Controls.Add(this.listBox_db_finish);
@@ -220,6 +236,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

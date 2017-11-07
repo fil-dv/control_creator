@@ -18,6 +18,7 @@ namespace c_creator
         public Ctrl_creator()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
             InitCombo();
         }
 
@@ -112,6 +113,11 @@ namespace c_creator
         private void comboBox_table_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox_db_start.Items.Clear();
+            SetTable();
+        }
+
+        void SetTable()
+        {
             switch (comboBox_table.SelectedIndex)
             {
                 case 0:
@@ -265,13 +271,61 @@ namespace c_creator
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form settingsForm = new Form();
-            settingsForm.ShowDialog();
+            try
+            {
+                SettingsForm.SettingsForm settingsForm = new SettingsForm.SettingsForm();
+                settingsForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошло исключение при работе с настройками. " + ex.Message);
+            }            
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        void ClearAll()
+        {
+            try
+            {
+                if (Mediator.DataList != null) Mediator.DataList.Clear();
+                Mediator.IsReady = false;
+                if (Mediator.PairList != null) Mediator.PairList.Clear();
+
+                if (listBox_db_start != null) listBox_db_start.Items.Clear();
+                if (listBox_db_finish != null) listBox_db_finish.Items.Clear();
+                if (listBox_xls_start != null) listBox_xls_start.Items.Clear();
+                if (listBox_xls_finish != null) listBox_xls_finish.Items.Clear();
+
+                _xlsFilePath = "";
+                if (_xlsItemList_1 != null) _xlsItemList_1.Clear();
+                if (_xlsItemList_2 != null) _xlsItemList_2.Clear();
+                if (_dbItemList_1 != null) _dbItemList_1.Clear();
+                if (_dbItemList_2 != null) _dbItemList_2.Clear();
+
+                button_create_ctrl.Enabled = false;                
+                ResetDbTable();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
+        }
+
+        void ResetDbTable()
+        {
+            int i = comboBox_table.SelectedIndex;
+            comboBox_table.SelectedIndex = 0;
+            comboBox_table.SelectedIndex = 1;
+            comboBox_table.SelectedIndex = i;
         }
     }
 }
