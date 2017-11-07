@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace c_creator.Infrastructure
 {
@@ -36,7 +33,7 @@ namespace c_creator.Infrastructure
                 {
                     File.Create(fullPath).Close();
                 }
-                using (var tw = new StreamWriter(fullPath, true))
+                using (var tw = new StreamWriter(fullPath, false))
                 {
                     string str = CtrlStringBuilder.BuildString();
                     tw.Write(str);

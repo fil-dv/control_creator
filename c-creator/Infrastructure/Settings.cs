@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace c_creator.Infrastructure
 {
     static class Settings
@@ -16,5 +11,8 @@ namespace c_creator.Infrastructure
 
         static int _сommentStart = 40;
         public static int CommentStart { get { return _сommentStart; } set { _сommentStart = value; } }
+
+        static bool _isRegister = true;
+        public static bool IsRegister { get { return _isRegister; } set { _isRegister = value; } }
     }
 }

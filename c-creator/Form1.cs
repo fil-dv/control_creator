@@ -87,7 +87,6 @@ namespace c_creator
                     strList.Add(str);
                 }
                 _xlsItemList_1 = CreateListViewItems(strList);
-                Mediator.StartList = _xlsItemList_1;
                 foreach (var item in _xlsItemList_1)
                 {
                     listBox_xls_start.Items.Add(item.Text);
@@ -257,13 +256,22 @@ namespace c_creator
                 XlsDbPair pair = new XlsDbPair
                 {
                     XlsRowId = _xlsItemList_2[i].Id,
-                    //DbRowID = _dbItemList_2[i].Id,
-                    //XlsRowText = _xlsItemList_2[i].Text,
                     DbRowText = _dbItemList_2[i].Text
                 };
                 resList.Add(pair);
             }
             return resList;
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form settingsForm = new Form();
+            settingsForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

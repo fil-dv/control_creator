@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace c_creator.Infrastructure
 {
@@ -15,8 +11,5 @@ namespace c_creator.Infrastructure
 
         static List<XlsDbPair> _pairList { get; set; }
         public static List<XlsDbPair> PairList { get { return _pairList; } set { _pairList = value; } }
-        static List<MyListViewItem> _startList { get; set; }
-        public static List<MyListViewItem> StartList { get { return _startList; } set { _startList = value; } }
-        
     }
 }
