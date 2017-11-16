@@ -29,7 +29,7 @@ namespace c_creator.Infrastructure
                 }
                 else
                 {
-                    builder.Append(pairs[0].DbRowText);                    
+                    builder.Append(pairs[0].DbRowText.ToUpper());                    
                 }
                 if (i != Mediator.DataList.Count - 1)
                 {

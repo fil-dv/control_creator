@@ -12,7 +12,7 @@ namespace c_creator.Infrastructure
         static int _сommentStart = 40;
         public static int CommentStart { get { return _сommentStart; } set { _сommentStart = value; } }
 
-        static bool _isRegister = true;
+        static bool _isRegister = false;
         public static bool IsRegister { get { return _isRegister; } set { _isRegister = value; } }
     }
 }
