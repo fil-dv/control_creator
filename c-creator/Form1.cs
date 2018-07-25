@@ -20,6 +20,27 @@ namespace c_creator
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             InitCombo();
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Length > 1 && args[1] != null)
+            {
+                string arg = getArgString(args);
+                _xlsFilePath = arg;
+                ExcelReader reader = new ExcelReader(this, arg);
+                reader.Read();
+                InsertXlsToListBox();
+            }
+        }
+
+        //   x:\Реєстри\NewFS\7-8 2240-1\imp.xlsx 
+
+        private string getArgString(string[] args)
+        {
+            string str = "";
+            for (int i = 1; i < args.Length; i++)
+            {
+                str += args[i] + " ";
+            }
+            return str;
         }
 
         private void button_open_file_Click(object sender, EventArgs e)
