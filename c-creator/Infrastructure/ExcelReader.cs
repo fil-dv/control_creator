@@ -20,7 +20,7 @@ namespace c_creator.Infrastructure
         {
             _mainForm = mainForm;
             _xlApp = new Microsoft.Office.Interop.Excel.Application();
-            _xlWorkBook = _xlApp.Workbooks.Open(path, 0, false, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
+            _xlWorkBook = _xlApp.Workbooks.Open(path, 0, true, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
             _xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)_xlWorkBook.Sheets[1];
             _xlRange = _xlWorkSheet.UsedRange;
         }
