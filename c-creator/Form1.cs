@@ -118,6 +118,22 @@ namespace c_creator
 
         void MoveItem(List<MyListViewItem> from, List<MyListViewItem> to, MyListViewItem mi)
         {
+            MyListViewItem itemToRemove = null;
+            foreach (var i in from)
+            {
+                if (i.Text == "         ") itemToRemove = i;
+            }
+
+            if (itemToRemove != null)
+            {
+                from.Remove(itemToRemove);
+            }
+
+            int index = from.IndexOf(mi);
+            MyListViewItem item = new MyListViewItem();
+            item.Id = mi.Id;
+            item.Text = "         ";
+            from[index] = item;
             from.Remove(mi);
             to.Add(mi);
         }
