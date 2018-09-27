@@ -9,3 +9,15 @@ D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.pdb
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.csproj.ResolveComReference.cache
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c_creator.SettingsForm.SettingsForm.resources
 D:\Dima\Programming\git\Control-creator\c-creator\obj\Debug\c-creator.csprojResolveAssemblyReference.cache
+X:\utils\Control-creator\c-creator\bin\Debug\c-creator.exe.config
+X:\utils\Control-creator\c-creator\bin\Debug\c-creator.exe
+X:\utils\Control-creator\c-creator\bin\Debug\c-creator.pdb
+X:\utils\Control-creator\c-creator\obj\Debug\c-creator.csprojResolveAssemblyReference.cache
+X:\utils\Control-creator\c-creator\obj\Debug\c-creator.csproj.ResolveComReference.cache
+X:\utils\Control-creator\c-creator\obj\Debug\c_creator.Ctrl_creator.resources
+X:\utils\Control-creator\c-creator\obj\Debug\c_creator.Properties.Resources.resources
+X:\utils\Control-creator\c-creator\obj\Debug\c_creator.SettingsForm.SettingsForm.resources
+X:\utils\Control-creator\c-creator\obj\Debug\c-creator.csproj.GenerateResource.cache
+X:\utils\Control-creator\c-creator\obj\Debug\c-creator.csproj.CoreCompileInputs.cache
+X:\utils\Control-creator\c-creator\obj\Debug\c-creator.exe
+X:\utils\Control-creator\c-creator\obj\Debug\c-creator.pdb

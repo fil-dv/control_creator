@@ -52,19 +52,22 @@
             // 
             this.listBox_xls_start.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.listBox_xls_start.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_xls_start.FormattingEnabled = true;
             this.listBox_xls_start.HorizontalScrollbar = true;
+            this.listBox_xls_start.ItemHeight = 18;
             this.listBox_xls_start.Location = new System.Drawing.Point(12, 62);
             this.listBox_xls_start.Name = "listBox_xls_start";
-            this.listBox_xls_start.Size = new System.Drawing.Size(426, 576);
+            this.listBox_xls_start.Size = new System.Drawing.Size(426, 508);
             this.listBox_xls_start.TabIndex = 0;
             this.listBox_xls_start.SelectedIndexChanged += new System.EventHandler(this.listBox_xls_start_SelectedIndexChanged);
             // 
             // button_open_file
             // 
+            this.button_open_file.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_open_file.Location = new System.Drawing.Point(12, 26);
             this.button_open_file.Name = "button_open_file";
-            this.button_open_file.Size = new System.Drawing.Size(426, 23);
+            this.button_open_file.Size = new System.Drawing.Size(426, 30);
             this.button_open_file.TabIndex = 1;
             this.button_open_file.Text = "Open file";
             this.button_open_file.UseVisualStyleBackColor = true;
@@ -74,10 +77,12 @@
             // 
             this.listBox_db_start.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_db_start.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_db_start.FormattingEnabled = true;
+            this.listBox_db_start.ItemHeight = 18;
             this.listBox_db_start.Location = new System.Drawing.Point(1143, 62);
             this.listBox_db_start.Name = "listBox_db_start";
-            this.listBox_db_start.Size = new System.Drawing.Size(201, 576);
+            this.listBox_db_start.Size = new System.Drawing.Size(201, 508);
             this.listBox_db_start.TabIndex = 2;
             this.listBox_db_start.SelectedIndexChanged += new System.EventHandler(this.listBox_db_start_SelectedIndexChanged);
             // 
@@ -86,11 +91,13 @@
             this.listBox_xls_finish.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_xls_finish.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_xls_finish.FormattingEnabled = true;
             this.listBox_xls_finish.HorizontalScrollbar = true;
+            this.listBox_xls_finish.ItemHeight = 18;
             this.listBox_xls_finish.Location = new System.Drawing.Point(462, 62);
             this.listBox_xls_finish.Name = "listBox_xls_finish";
-            this.listBox_xls_finish.Size = new System.Drawing.Size(329, 576);
+            this.listBox_xls_finish.Size = new System.Drawing.Size(329, 508);
             this.listBox_xls_finish.TabIndex = 3;
             this.listBox_xls_finish.SelectedIndexChanged += new System.EventHandler(this.listBox_xls_finish_SelectedIndexChanged);
             // 
@@ -98,20 +105,23 @@
             // 
             this.listBox_db_finish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_db_finish.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_db_finish.FormattingEnabled = true;
+            this.listBox_db_finish.ItemHeight = 18;
             this.listBox_db_finish.Location = new System.Drawing.Point(815, 62);
             this.listBox_db_finish.Name = "listBox_db_finish";
-            this.listBox_db_finish.Size = new System.Drawing.Size(303, 576);
+            this.listBox_db_finish.Size = new System.Drawing.Size(303, 508);
             this.listBox_db_finish.TabIndex = 4;
             this.listBox_db_finish.SelectedIndexChanged += new System.EventHandler(this.listBox_db_finish_SelectedIndexChanged_1);
             // 
             // comboBox_table
             // 
             this.comboBox_table.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_table.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox_table.FormattingEnabled = true;
             this.comboBox_table.Location = new System.Drawing.Point(1143, 29);
             this.comboBox_table.Name = "comboBox_table";
-            this.comboBox_table.Size = new System.Drawing.Size(201, 21);
+            this.comboBox_table.Size = new System.Drawing.Size(201, 26);
             this.comboBox_table.TabIndex = 5;
             this.comboBox_table.SelectedIndexChanged += new System.EventHandler(this.comboBox_table_SelectedIndexChanged);
             // 
@@ -120,9 +130,10 @@
             this.button_create_ctrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button_create_ctrl.Enabled = false;
+            this.button_create_ctrl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_create_ctrl.Location = new System.Drawing.Point(462, 27);
             this.button_create_ctrl.Name = "button_create_ctrl";
-            this.button_create_ctrl.Size = new System.Drawing.Size(656, 23);
+            this.button_create_ctrl.Size = new System.Drawing.Size(656, 29);
             this.button_create_ctrl.TabIndex = 6;
             this.button_create_ctrl.Text = "Create control";
             this.button_create_ctrl.UseVisualStyleBackColor = true;
@@ -147,38 +158,39 @@
             this.settingsToolStripMenuItem,
             this.toolStripSeparator1,
             this.toolStripMenuItem2});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
             this.toolStripMenuItem1.Text = "File";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "Clear All";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(115, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "Exit";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -193,14 +205,14 @@
             // aboutProgrammToolStripMenuItem
             // 
             this.aboutProgrammToolStripMenuItem.Name = "aboutProgrammToolStripMenuItem";
-            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutProgrammToolStripMenuItem.Text = "About programm";
             // 
             // Ctrl_creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 673);
+            this.ClientSize = new System.Drawing.Size(1359, 589);
             this.Controls.Add(this.button_create_ctrl);
             this.Controls.Add(this.comboBox_table);
             this.Controls.Add(this.listBox_db_finish);
