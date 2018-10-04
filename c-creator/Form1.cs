@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -69,7 +70,7 @@ namespace c_creator
 
         void InsertDbTableCulumns(string fileName)
         {
-            List<string> columnList = TextFileHandler.ReadTextFile(@"..\..\text\" + fileName);
+            List<string> columnList = File.ReadAllLines(@"..\..\text\" + fileName, System.Text.Encoding.Default).ToList();
             List<MyListViewItem> myItemList = CreateListViewItems(columnList);
             foreach (var item in myItemList)
             {
@@ -118,8 +119,31 @@ namespace c_creator
 
         void MoveItem(List<MyListViewItem> from, List<MyListViewItem> to, MyListViewItem mi)
         {
-            from.Remove(mi);
-            to.Add(mi);
+            if (mi.Text == String.Empty)
+            {
+                return;
+            }
+
+            for (int i = 0; i < from.Count; i++)
+            {
+                if (from[i].Text == String.Empty)
+                {
+                    from.Remove(from[i]);
+                }
+            }
+
+            to.Add(new MyListViewItem { Id = mi.Id, Text = mi.Text });
+
+            for (int i = 0; i < from.Count; i++)
+            {
+                if (from[i] == mi)
+                {
+                    from[i].Text = String.Empty;
+                }
+            }
+
+            //from.Remove(mi);
+            
         }
 
         void ReDrow(ListBox lb, List<MyListViewItem> list)
@@ -219,7 +243,11 @@ namespace c_creator
                 else
                 {
                     string str = listBox_db_start.SelectedItem.ToString();
-                    if (str.Contains("--"))
+                    if (str.Contains("---"))
+                    {
+                        return;
+                    }
+                    if (String.IsNullOrEmpty(str))
                     {
                         return;
                     }
@@ -263,9 +291,10 @@ namespace c_creator
             try
             {
                 Mediator.PairList = CreatePairList();
+
                 if (TextFileHandler.CreateTextFile(_xlsFilePath))
                 {
-                    MessageBox.Show(_xlsFilePath + Settings.CtrlFileName, "Файл успешно создан!");
+                    MessageBox.Show(Mediator.FullPath, "Файл успешно создан!");
                 }
             }
             catch (Exception ex)

@@ -13,5 +13,7 @@ namespace c_creator.Infrastructure
 
         static List<XlsDbPair> _pairList { get; set; }
         public static List<XlsDbPair> PairList { get { return _pairList; } set { _pairList = value; } }
+
+        public static string FullPath { get; set; } 
     }
 }

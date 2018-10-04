@@ -21,13 +21,29 @@ namespace c_creator.Infrastructure
             return resList;
         }
 
+
         public static bool CreateTextFile(string path)
         {
             bool result = false;
             try
             {
+
+
+
+                string fullPath; // = path + Settings.CtrlFileName;
+
+
+                string[] args = Environment.GetCommandLineArgs();
+                if (args.Length > 1 && args[1] != null)
+                {
+                    fullPath = Path.GetDirectoryName(path) + "\\" + Settings.CtrlFileName;
+                }
+                else
+                {
+                    fullPath = path + Settings.CtrlFileName;
+                }
+
                 
-                string fullPath = path + Settings.CtrlFileName;
 
                 if (!File.Exists(fullPath))
                 {
@@ -38,6 +54,7 @@ namespace c_creator.Infrastructure
                     string str = CtrlStringBuilder.BuildString();
                     tw.Write(str);
                     result = true;
+                    Mediator.FullPath = fullPath;
                 }
                 return result;
             }

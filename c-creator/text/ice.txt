@@ -89,9 +89,9 @@ c_phone_f_home,
 c_phone_work,
 c_phone_mobile,
 ------------------------------,
-comment1,
-comment2,
-comment3,
+comment1, -- цель кредита
+comment2, -- цкн
+comment3, -- last_pay_sum
 comment4,
 comment5,
 comment6,
@@ -117,7 +117,7 @@ comment25,
 comment26,
 comment27,
 comment28,
-comment29,
+comment29, -- стадия претензий
 comment30,
 comment31,
 comment32,
